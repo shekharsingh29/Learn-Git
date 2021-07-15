@@ -35,4 +35,4 @@ repository and will be used to track the details of commiters.
 17. git push
 18. git branch --> Will give you list of all branches available and the current branch highlighted
 19. git switch branch_name --> For switching to a given branch_name
-20. 
+20. git merge branch_name --> merge the branch_name with the branch you are currently on.  
