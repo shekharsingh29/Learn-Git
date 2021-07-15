@@ -31,4 +31,6 @@ repository and will be used to track the details of commiters.
 15. git clone https://github.com/shekharsingh29/Learn-Git.git
 16. git pull 
 17. git push
- 
+18. git branch --> Will give you list of all branches available and the current branch highlighted
+19. git switch branch_name --> For switching to a given branch_name
+
