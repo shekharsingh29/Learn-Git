@@ -3,7 +3,7 @@
 1. git --version
 2. git help --> Will list out commands in Git
 
-### Git global configuration
+## Git global configuration
 3. git config --global user.name "Shekhar Singh"
 4. git config --global user.email "kai.shekhar@gmail" 
 5. git config --list
@@ -11,7 +11,7 @@
 These are global configurations. It will be available whenever user pushes to a central 
 repository and will be used to track the details of commiters.
 
-# Whenever you want to initialize Git on a working directory
+## Whenever you want to initialize Git on a working directory
 6. git init (Enter this inside the diretory where you want files to be tracked)
 
 7. git status --> Check if any files are untracked in current directory for commiting
@@ -23,15 +23,15 @@ repository and will be used to track the details of commiters.
 11. git commit -am "commit message" --> Combination of git add and git commit.
 12. git diff --> This will tell you differences in file between repository and working area
 
-### git logs and tracking
+## git logs and tracking
 13. git log --> Will show last 10 commits with alll the detail.
 14. git log --author="kai.shekhar@gmail.com"  --> this will search the commit based on authors emailID
 
-### Git commands to manage Github repository (aka Distributed aproach)
-```
+## Git commands to manage Github repository (aka Distributed aproach)
+
 15. git clone https://github.com/shekharsingh29/Learn-Git.git
 16. git pull 
 17. git push
 18. git branch --> Will give you list of all branches available and the current branch highlighted
 19. git switch branch_name --> For switching to a given branch_name
-```
+
