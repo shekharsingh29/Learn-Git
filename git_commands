@@ -20,7 +20,8 @@ repository and will be used to track the details of commiters.
 10. git commit -m "your message for this commit" -->  This will move the files from staging area 
         to central repository. Now this will track any changes made to file commited in working area
         with respect to central repository.
-11. git commit -am "commit message" --> Combination of git add and git commit.
+11. git commit -am "commit message" --> Combination of git add and git commit. Only when files are 
+                modified and are tracked.
 12. git diff --> This will tell you differences in file between repository and working area
 
 ## git logs and tracking
@@ -34,4 +35,4 @@ repository and will be used to track the details of commiters.
 17. git push
 18. git branch --> Will give you list of all branches available and the current branch highlighted
 19. git switch branch_name --> For switching to a given branch_name
-
+20. 
