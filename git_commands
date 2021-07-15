@@ -27,3 +27,8 @@ repository and will be used to track the details of commiters.
 13. git log --> Will show last 10 commits with alll the detail.
 14. git log --author="kai.shekhar@gmail.com"  --> this will search the commit based on authors emailID
 
+# Git commands to manage Github repository (aka Distributed aproach)
+15. git clone https://github.com/shekharsingh29/Learn-Git.git
+16. git pull 
+17. git push
+ 
