@@ -44,3 +44,11 @@ repository and will be used to track the details of commiters.
 
 24. git diff filename --> will give you difference between file in working area and staging area.
 25. git iff commidID1 commitID2 --> Gives difference between the mentioned commit ID's.
+
+
+26. git branch -a --> To list all the branches.
+27. git branch -m branch_name new_branch_name --> to rename a branch
+28. git branch -d branch_name --> To delete a branch(you have to be on some other branch and not 
+        branch_name you are deleting)
+
+
