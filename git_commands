@@ -51,4 +51,12 @@ repository and will be used to track the details of commiters.
 28. git branch -d branch_name --> To delete a branch(you have to be on some other branch and not 
         branch_name you are deleting)
 
-
+## Git Stash
+19. git stash --> This will move every change in working directory on a hold and will go to its
+             initial state
+20. git stash --list --> This will list all the stashes done...work to be done later on.
+21. git stash --appy --> This will move the stash back to the working directory and changes will be 
+                visible.
+22. git stash --drop --> This is needed to be done after stash --apply to remove anything on the stash
+                that is already applied.
+                
