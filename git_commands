@@ -36,3 +36,11 @@ repository and will be used to track the details of commiters.
 18. git branch --> Will give you list of all branches available and the current branch highlighted
 19. git switch branch_name --> For switching to a given branch_name
 20. git merge branch_name --> merge the branch_name with the branch you are currently on.  
+21. git reset --soft commitID --> This will move the HEAD to the commitID specified and changes are 
+                made to come to staging area.
+22. git reset --hard coomitID --> Same as above except that it will remove the changes completely.
+23. git revert HEAD --> This is mostly for when the code is pushed to the repository. It will
+                create a new commit with all changes removed.
+
+24. git diff filename --> will give you difference between file in working area and staging area.
+25. git iff commidID1 commitID2 --> Gives difference between the mentioned commit ID's.
