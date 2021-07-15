@@ -53,10 +53,17 @@ repository and will be used to track the details of commiters.
 
 ## Git Stash
 19. git stash --> This will move every change in working directory on a hold and will go to its
-             initial state
+             initial state, this will be done only for tracked files.
 20. git stash list --> This will list all the stashes done...work to be done later on.
 21. git stash apply --> This will move the stash back to the working directory and changes will be 
                 visible.
 22. git stash drop --> This is needed to be done after stash --apply to remove anything on the stash
                 that is already applied.
+23. git stash -a --> This will stash both tracked and untracked files.
+24. git stash pop --> This is a combination of stash apply and stash drop.
+25. git stash save -a "message text" --> Saves the stash with a message
+26. git stash show stash@{index} --> Find changes done in specific stash.
+27. git stash apply stash@{index} --> To add back specific stash.
+28. git stash pop stash@{index} --> pop out specific stash
+
 
