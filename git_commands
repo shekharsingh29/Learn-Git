@@ -66,4 +66,11 @@ repository and will be used to track the details of commiters.
 27. git stash apply stash@{index} --> To add back specific stash.
 28. git stash pop stash@{index} --> pop out specific stash
 29. git stash drop stash@{index} --> Drop specific stash.
+30. [shekhar@localhost Learn-Git]$ git remote -v
+        origin	https://github.com/shekharsingh29/Learn-Git.git (fetch)
+        origin	https://github.com/shekharsingh29/Learn-Git.git (push)
+         --> This cmd is used to find out the remote gthub repository this working directory is working on.
+
+31. 
+
 
