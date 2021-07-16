@@ -65,5 +65,5 @@ repository and will be used to track the details of commiters.
 26. git stash show stash@{index} --> Find changes done in specific stash.
 27. git stash apply stash@{index} --> To add back specific stash.
 28. git stash pop stash@{index} --> pop out specific stash
-
+29. git stash drop stash@{index} --> Drop specific stash.
 
