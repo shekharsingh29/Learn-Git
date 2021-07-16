@@ -71,6 +71,7 @@ repository and will be used to track the details of commiters.
         origin	https://github.com/shekharsingh29/Learn-Git.git (push)
          --> This cmd is used to find out the remote gthub repository this working directory is working on.
 
-31. 
+31. git commit --amend -m "message to change" --> This is used to change the commit message of the most recent commit.
+32. 
 
 
