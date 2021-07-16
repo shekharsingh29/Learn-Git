@@ -21,7 +21,7 @@ repository and will be used to track the details of commiters.
         to central repository. Now this will track any changes made to file commited in working area
         with respect to central repository.
 11. git commit -am "commit message" --> Combination of git add and git commit. Only when files are 
-                modified and are tracked.
+        modified and are tracked.
 12. git diff --> This will tell you differences in file between repository and working area
 
 ## git logs and tracking
@@ -37,10 +37,10 @@ repository and will be used to track the details of commiters.
 19. git switch branch_name --> For switching to a given branch_name
 20. git merge branch_name --> merge the branch_name with the branch you are currently on.  
 21. git reset --soft commitID --> This will move the HEAD to the commitID specified and changes are 
-                made to come to staging area.
+        made to come to staging area.
 22. git reset --hard coomitID --> Same as above except that it will remove the changes completely.
 23. git revert HEAD --> This is mostly for when the code is pushed to the repository. It will
-                create a new commit with all changes removed.
+        create a new commit with all changes removed.
 
 24. git diff filename --> will give you difference between file in working area and staging area.
 25. git iff commidID1 commitID2 --> Gives difference between the mentioned commit ID's.
@@ -53,12 +53,12 @@ repository and will be used to track the details of commiters.
 
 ## Git Stash
 19. git stash --> This will move every change in working directory on a hold and will go to its
-             initial state, this will be done only for tracked files.
+        initial state, this will be done only for tracked files.
 20. git stash list --> This will list all the stashes done...work to be done later on.
 21. git stash apply --> This will move the stash back to the working directory and changes will be 
-                visible.
+        visible.
 22. git stash drop --> This is needed to be done after stash --apply to remove anything on the stash
-                that is already applied.
+        that is already applied.
 23. git stash -a --> This will stash both tracked and untracked files.
 24. git stash pop --> This is a combination of stash apply and stash drop.
 25. git stash save -a "message text" --> Saves the stash with a message
@@ -72,6 +72,22 @@ repository and will be used to track the details of commiters.
          --> This cmd is used to find out the remote gthub repository this working directory is working on.
 
 31. git commit --amend -m "message to change" --> This is used to change the commit message of the most recent commit.
-32. 
 
+## Git Reflog
 
+git log --oneline doesn't show orphan commits, the orphan commits can be formed using amend or reset or deletion. 
+
+32. git reflog --oneline --> Will show all the commits including orphan commits.
+33. git reflog HEAD@{20} --> It will show commits from index 20 and above..21, 22, 23.... (Most recent comment gets 
+        the least index i.e 0. It's like LIFO in queues).
+34. git checkout HEAD@{index} --> Thihs will start pointing HEAD to the given index, even though if that index belongs
+        to orphan commit.
+35. git reflog HEAD@{6.hours.ago} --> this will show commits prior to last 6 hours.
+36. git diff HEAD@{6} HEAD@{10} --> Thihs will compare commits from index number 6 to 10.
+37. git reflog HEAD@{2021-07-12} --> This will show commits on and before 12th July 2021
+38. git reflog main@{5} --> Same like HEAD this will show main branches state from position number 5 and below
+        ..same can be done for other branches like git reflog feature_branch@{5}
+39. git reflog expire --expire-unreachable=now --all --> This is used to remove all the orphan commits.
+40. git gc --prune=now --> This will clean them up from system.
+
+## Squash and Merge
