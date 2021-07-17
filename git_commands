@@ -97,4 +97,5 @@ git log --oneline doesn't show orphan commits, the orphan commits can be formed 
 
 
 ## Cleaning up your directory.
-git clean -d -x -i
+git clean -d -x -i --> This will clear out any untacked files in an interactive mode.
+
