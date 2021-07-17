@@ -66,29 +66,30 @@ repository and will be used to track the details of commiters.
 27. git stash apply stash@{index} --> To add back specific stash.
 28. git stash pop stash@{index} --> pop out specific stash
 29. git stash drop stash@{index} --> Drop specific stash.
-30. [shekhar@localhost Learn-Git]$ git remote -v
+30. git stash clear --> Will drop everything
+31. [shekhar@localhost Learn-Git]$ git remote -v
         origin	https://github.com/shekharsingh29/Learn-Git.git (fetch)
         origin	https://github.com/shekharsingh29/Learn-Git.git (push)
          --> This cmd is used to find out the remote gthub repository this working directory is working on.
 
-31. git commit --amend -m "message to change" --> This is used to change the commit message of the most recent commit.
+32. git commit --amend -m "message to change" --> This is used to change the commit message of the most recent commit.
 
 ## Git Reflog
 
 git log --oneline doesn't show orphan commits, the orphan commits can be formed using amend or reset or deletion. 
 
-32. git reflog --oneline --> Will show all the commits including orphan commits.
-33. git reflog HEAD@{20} --> It will show commits from index 20 and above..21, 22, 23.... (Most recent comment gets 
+33. git reflog --oneline --> Will show all the commits including orphan commits.
+34. git reflog HEAD@{20} --> It will show commits from index 20 and above..21, 22, 23.... (Most recent comment gets 
         the least index i.e 0. It's like LIFO in queues).
-34. git checkout HEAD@{index} --> Thihs will start pointing HEAD to the given index, even though if that index belongs
+35. git checkout HEAD@{index} --> Thihs will start pointing HEAD to the given index, even though if that index belongs
         to orphan commit.
-35. git reflog HEAD@{6.hours.ago} --> this will show commits prior to last 6 hours.
-36. git diff HEAD@{6} HEAD@{10} --> Thihs will compare commits from index number 6 to 10.
-37. git reflog HEAD@{2021-07-12} --> This will show commits on and before 12th July 2021
-38. git reflog main@{5} --> Same like HEAD this will show main branches state from position number 5 and below
+36. git reflog HEAD@{6.hours.ago} --> this will show commits prior to last 6 hours.
+37. git diff HEAD@{6} HEAD@{10} --> Thihs will compare commits from index number 6 to 10.
+38. git reflog HEAD@{2021-07-12} --> This will show commits on and before 12th July 2021
+39. git reflog main@{5} --> Same like HEAD this will show main branches state from position number 5 and below
         ..same can be done for other branches like git reflog feature_branch@{5}
-39. git reflog expire --expire-unreachable=now --all --> This is used to remove all the orphan commits.
-40. git gc --prune=now --> This will clean them up from system.
+40. git reflog expire --expire-unreachable=now --all --> This is used to remove all the orphan commits.
+41. git gc --prune=now --> This will clean them up from system.
 
 ## Squash and Merge
 
@@ -98,4 +99,52 @@ git log --oneline doesn't show orphan commits, the orphan commits can be formed 
 
 ## Cleaning up your directory.
 git clean -d -x -i --> This will clear out any untacked files in an interactive mode.
+
+
+## Git Rebase
+
+Use this link to learn git rebase and practice --> https://onlywei.github.io/explain-git-with-d3/
+
+Go to the feature branch feature_1 and Enter
+>> git rebase main
+This will add all the changes of feature1  on top of main and then switch to branch main.
+>> git merge feature_1
+>> git branch -d feature_1
+
+Suppose there are 2 more brances apart from main -featire_1 and feature_2. feature_2 rebases with main
+and all the necessary steps are performed post that. Then we try to rebase feature_1 with main and we get a conflict..
+after we resolve the conflict it is recommended to do..
+>> git rebase --continue
+This will pick up from where it left.
+
+## Cherry picking.
+
+Cherry picking as the name suggests cherry picks a specific commit ID and creates a new commit. Scenario:
+there are few commits in branch feature_1 and one of the commits is abc123. Branch feature_2 wants this commit
+abc123 ...
+>> git switch feature_2
+>> git cherry-pick abc123
+You can remove feature_1 branch and perform cleanup activity.
+
+>> git cherry-pick --continue --> After resolving merge conflicts while cherry picking.
+>> git cherry-pick --abort --> Abort cherry picking.
+
+
+## Git tag
+
+git tag --> Will list out all the available tags in the current repository.
+git checkout tagname --> This will point the HEAD to tagname(commit where the tag was created)
+git tag tag_name --> Light weight tag.
+git tag -a tag_name -m "message with the tag" --> Same as light weight tag with some aditional features of 
+        logging extra details with the tag.
+git show tag_name --> This will how details about the tag
+git tag -d tag_name --> To delete a specific tag.
+git tag -a tag_name -m "message with the tag" commit-ID --> To tag a specific commit ID.
+git push --tag --> To push tags to central repository.
+git push origin :tag_name --> To delete a tag from remote repository
+
+
+
+
+
 
