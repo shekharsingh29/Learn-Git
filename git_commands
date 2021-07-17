@@ -37,13 +37,13 @@ repository and will be used to track the details of commiters.
 19. git switch branch_name --> For switching to a given branch_name
 20. git merge branch_name --> merge the branch_name with the branch you are currently on.  
 21. git reset --soft commitID --> This will move the HEAD to the commitID specified and changes are 
-        made to come to staging area.
+        made to come to staging area. Instead of we can use file name also if they are in staged area.
 22. git reset --hard coomitID --> Same as above except that it will remove the changes completely.
 23. git revert HEAD --> This is mostly for when the code is pushed to the repository. It will
         create a new commit with all changes removed.
 
 24. git diff filename --> will give you difference between file in working area and staging area.
-25. git iff commidID1 commitID2 --> Gives difference between the mentioned commit ID's.
+25. git diff commidID1 commitID2 --> Gives difference between the mentioned commit ID's.
 
 
 26. git branch -a --> To list all the branches.
@@ -91,3 +91,10 @@ git log --oneline doesn't show orphan commits, the orphan commits can be formed 
 40. git gc --prune=now --> This will clean them up from system.
 
 ## Squash and Merge
+
+
+
+
+
+## Cleaning up your directory.
+git clean -d -x -i
